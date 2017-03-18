@@ -1,0 +1,871 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
+$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
+查看结果：
+$ git config user.name
+$ git config user.email
+1.2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub使用方法">
+<meta property="og:url" content="http://breakerthb.github.io/2017/03/18/GitHub-Usage.html">
+<meta property="og:site_name" content="天花板的个人博客">
+<meta property="og:description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
+$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
+查看结果：
+$ git config user.name
+$ git config user.email
+1.2">
+<meta property="og:image" content="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145902-adc9c8f347b1c84b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://img.my.csdn.net/uploads/201304/16/1366089042_1867.png">
+<meta property="og:image" content="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
+<meta property="og:updated_time" content="2017-03-18T07:05:51.972Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub使用方法">
+<meta name="twitter:description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
+$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
+查看结果：
+$ git config user.name
+$ git config user.email
+1.2">
+<meta name="twitter:image" content="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://breakerthb.github.io/2017/03/18/GitHub-Usage.html"/>
+
+
+
+
+
+  <title> GitHub使用方法 | 天花板的个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">天花板的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://breakerthb.github.io/2017/03/18/GitHub-Usage.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="天花板">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天花板的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                GitHub使用方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T08:31:00+00:00">
+                2017-03-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Tools</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg" alt="常用命令"></p>
+<h1 id="1-常用配置"><a href="#1-常用配置" class="headerlink" title="1. 常用配置"></a>1. 常用配置</h1><h2 id="1-1-设置Email"><a href="#1-1-设置Email" class="headerlink" title="1.1 设置Email"></a>1.1 设置Email</h2><pre><code>$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your_email@youremail.com&quot;
+</code></pre><p>查看结果：</p>
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre><h2 id="1-2-用vim写日志"><a href="#1-2-用vim写日志" class="headerlink" title="1.2 用vim写日志"></a>1.2 用vim写日志</h2><pre><code>$ git config --global core.editor vim
+</code></pre><p>查看结果：</p>
+<pre><code>$ cat ~/.git/config
+</code></pre><h1 id="2-配置GitHub"><a href="#2-配置GitHub" class="headerlink" title="2. 配置GitHub"></a>2. 配置GitHub</h1><h2 id="2-1-首先在本地创建ssh-key"><a href="#2-1-首先在本地创建ssh-key" class="headerlink" title="2.1.首先在本地创建ssh key"></a>2.1.首先在本地创建ssh key</h2><pre><code>$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
+</code></pre><p> 之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在~/下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。</p>
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+</code></pre><p>回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key,title随便填，粘贴key。</p>
+<h2 id="2-2-验证"><a href="#2-2-验证" class="headerlink" title="2.2. 验证"></a>2.2. 验证</h2><p>为了验证是否成功，在git bash下输入：</p>
+<pre><code>$ ssh -T git@github.com 
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/145902-adc9c8f347b1c84b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证"></p>
+<p>如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。<br>这就表示已成功连上github。</p>
+<p><img src="http://img.my.csdn.net/uploads/201304/16/1366089042_1867.png" alt="成功连接"></p>
+<h2 id="2-3-上传GitHub"><a href="#2-3-上传GitHub" class="headerlink" title="2.3. 上传GitHub"></a>2.3. 上传GitHub</h2><p>接下来我们要做的就是把本地仓库传到github上去，在此之前还需要设置username和email，因为github每次commit都会记录他们。</p>
+<pre><code>$ git config --global user.name &quot;your name&quot;
+$ git config --global user.email &quot;your_email@youremail.com&quot;
+</code></pre><h2 id="2-4-添加远程地址"><a href="#2-4-添加远程地址" class="headerlink" title="2.4. 添加远程地址"></a>2.4. 添加远程地址</h2><pre><code>$ git remote add origin git@github.com:yourName/yourRepo.git
+</code></pre><p> 后面的yourName和yourRepo表示你再github的用户名和刚才新建的仓库，加完之后进入.git，打开config，这里会多出一个remote “origin”内容，这就是刚才添加的远程地址，也可以直接修改config来配置远程地址。</p>
+<h1 id="3-提交、上传"><a href="#3-提交、上传" class="headerlink" title="3. 提交、上传"></a>3. 提交、上传</h1><h2 id="3-1-在本地仓库里添加文件"><a href="#3-1-在本地仓库里添加文件" class="headerlink" title="3.1. 在本地仓库里添加文件"></a>3.1. 在本地仓库里添加文件</h2><pre><code>$ git add a.txt
+$ git commit -m &quot;first commit&quot;
+</code></pre><p>极简方式：</p>
+<pre><code>$ git add .
+$ git commit -a
+</code></pre><h2 id="3-2-上传到github："><a href="#3-2-上传到github：" class="headerlink" title="3.2. 上传到github："></a>3.2. 上传到github：</h2><pre><code>$ git push -u origin master
+</code></pre><p>如果失败，可能是GitHub上的README.md不在本地，执行：</p>
+<pre><code>$ git pull --rebase origin master # 合并
+</code></pre><p>之后再执行push。</p>
+<p>git push命令会将本地仓库推送到远程服务器。git pull命令则相反。</p>
+<p>修改完代码后，使用git status可以查看文件的差别，使用git add 添加要commit的文件，也可以用git add -i来智能添加文件。之后git commit提交本次修改，git push上传到github。</p>
+<h1 id="4-常用配置"><a href="#4-常用配置" class="headerlink" title="4. 常用配置"></a>4. 常用配置</h1><h2 id="4-1-添加fork-me图标"><a href="#4-1-添加fork-me图标" class="headerlink" title="4.1 添加fork me图标"></a>4.1 添加fork me图标</h2><p><img src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt=""></p>
+<p>ref : <a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">https://github.com/blog/273-github-ribbons</a></p>
+<h2 id="Readme-md模板"><a href="#Readme-md模板" class="headerlink" title="Readme.md模板"></a>Readme.md模板</h2><pre><code>&lt;a href=&quot;https://github.com/breakerthb/&quot;&gt;
+&lt;img style=&quot;position: absolute; top: 0; left: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67&quot; alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png&quot;&gt;
+&lt;/a&gt;
+
+# Project Introduction
+
+XXXXX
+
+![](https://github.com/breakerthb/AccessCount/blob/master/intro.png)
+
+# Flag
+
+- Test
+
+# Language
+
+- C++
+
+# Branch
+
+## master
+
+A tool without UI
+
+## ui
+
+A tool with UI
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/18/SimpleBlog.html" rel="next" title="最简单的静态博客 - SimpleBlog">
+                <i class="fa fa-chevron-left"></i> 最简单的静态博客 - SimpleBlog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/18/BlogDemo.html" rel="prev" title="博客模板">
+                博客模板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="天花板" />
+          <p class="site-author-name" itemprop="name">天花板</p>
+           
+              <p class="site-description motion-element" itemprop="description">Do not give up unless you die</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/breakerthb" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jianshu.com/u/9202155c8b4a" title="简书" target="_blank">简书</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-常用配置"><span class="nav-number">1.</span> <span class="nav-text">1. 常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-设置Email"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 设置Email</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-用vim写日志"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 用vim写日志</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-配置GitHub"><span class="nav-number">2.</span> <span class="nav-text">2. 配置GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-首先在本地创建ssh-key"><span class="nav-number">2.1.</span> <span class="nav-text">2.1.首先在本地创建ssh key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-验证"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-上传GitHub"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 上传GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-添加远程地址"><span class="nav-number">2.4.</span> <span class="nav-text">2.4. 添加远程地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-提交、上传"><span class="nav-number">3.</span> <span class="nav-text">3. 提交、上传</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-在本地仓库里添加文件"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. 在本地仓库里添加文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-上传到github："><span class="nav-number">3.2.</span> <span class="nav-text">3.2. 上传到github：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-常用配置"><span class="nav-number">4.</span> <span class="nav-text">4. 常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-添加fork-me图标"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 添加fork me图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Readme-md模板"><span class="nav-number">4.2.</span> <span class="nav-text">Readme.md模板</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">天花板</span>
+</div>
+
+<!-- 
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+ -->
+
+<!-- 
+&nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+ -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
