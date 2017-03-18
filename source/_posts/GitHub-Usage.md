@@ -1,5 +1,5 @@
 ---
-title: 'GitHub Usage'
+title: GitHub使用方法
 date: 2017-03-17 08:31:00
 tags:
     - git

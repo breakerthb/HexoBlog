@@ -37,9 +37,9 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
+  archives: /archives
   categories: /categories
   about: /about
-  archives: /archives
   tags: /tags
 # sitemap: /sitemap.xml
 # commonweal: /404.html
@@ -63,8 +63,6 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
   something: heartbeat
-
-
 
 
 # ---------------------------------------------------------------
@@ -129,7 +127,6 @@ font:
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
 
 # Social Links
 # Key is the link label showing to end users.

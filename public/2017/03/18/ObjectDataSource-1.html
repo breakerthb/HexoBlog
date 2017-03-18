@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="CSharp," />
 
 
 
@@ -87,36 +87,23 @@
 
 
 
-<meta name="description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
-$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
-查看结果：
-$ git config user.name
-$ git config user.email
-1.2">
+<meta name="description" content="ASP.NET中，数据源控件是所有显示控件和数据库绑定的媒介，因此相当重要。数据源控件实际上是帮助绑定动作完成数据库的增、删、改、查功能。与SqlDataSource相比，ObjectDataSource更适用于三层架构（UI、BLL、DAL）的开发。用户可以自行定义访问数据库接口。ObjectDataSource控件实际上是通过一个BLL层类完成对某一个特定数据库的操作。
+1.建立三层架构这里，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub使用方法">
-<meta property="og:url" content="http://breakerthb.github.io/2017/03/17/GitHub-Usage.html">
+<meta property="og:title" content="ObjectDataSource数据源控件（1）手动实现">
+<meta property="og:url" content="http://breakerthb.github.io/2017/03/18/ObjectDataSource-1.html">
 <meta property="og:site_name" content="天花板的个人博客">
-<meta property="og:description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
-$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
-查看结果：
-$ git config user.name
-$ git config user.email
-1.2">
-<meta property="og:image" content="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145902-adc9c8f347b1c84b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://img.my.csdn.net/uploads/201304/16/1366089042_1867.png">
-<meta property="og:image" content="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png">
-<meta property="og:updated_time" content="2017-03-18T06:11:54.411Z">
+<meta property="og:description" content="ASP.NET中，数据源控件是所有显示控件和数据库绑定的媒介，因此相当重要。数据源控件实际上是帮助绑定动作完成数据库的增、删、改、查功能。与SqlDataSource相比，ObjectDataSource更适用于三层架构（UI、BLL、DAL）的开发。用户可以自行定义访问数据库接口。ObjectDataSource控件实际上是通过一个BLL层类完成对某一个特定数据库的操作。
+1.建立三层架构这里，">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145902-19523683853a78ca?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145902-747944ec56309e7d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/145902-5023cad227dd544a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-18T06:14:03.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GitHub使用方法">
-<meta name="twitter:description" content="1. 常用配置1.1 设置Email$ git config --global user.name &amp;quot;your name&amp;quot;
-$ git config --global user.email &amp;quot;your_email@youremail.com&amp;quot;
-查看结果：
-$ git config user.name
-$ git config user.email
-1.2">
-<meta name="twitter:image" content="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg">
+<meta name="twitter:title" content="ObjectDataSource数据源控件（1）手动实现">
+<meta name="twitter:description" content="ASP.NET中，数据源控件是所有显示控件和数据库绑定的媒介，因此相当重要。数据源控件实际上是帮助绑定动作完成数据库的增、删、改、查功能。与SqlDataSource相比，ObjectDataSource更适用于三层架构（UI、BLL、DAL）的开发。用户可以自行定义访问数据库接口。ObjectDataSource控件实际上是通过一个BLL层类完成对某一个特定数据库的操作。
+1.建立三层架构这里，">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/145902-19523683853a78ca?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -144,13 +131,13 @@ $ git config user.email
 
 
 
-  <link rel="canonical" href="http://breakerthb.github.io/2017/03/17/GitHub-Usage.html"/>
+  <link rel="canonical" href="http://breakerthb.github.io/2017/03/18/ObjectDataSource-1.html"/>
 
 
 
 
 
-  <title> GitHub使用方法 | 天花板的个人博客 </title>
+  <title> ObjectDataSource数据源控件（1）手动实现 | 天花板的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +276,7 @@ $ git config user.email
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://breakerthb.github.io/2017/03/17/GitHub-Usage.html">
+    <link itemprop="mainEntityOfPage" href="http://breakerthb.github.io/2017/03/18/ObjectDataSource-1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="天花板">
@@ -310,7 +297,7 @@ $ git config user.email
             
             
               
-                GitHub使用方法
+                ObjectDataSource数据源控件（1）手动实现
               
             
           </h1>
@@ -325,8 +312,8 @@ $ git config user.email
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T08:31:00+00:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-18T06:13:13+00:00">
+                2017-03-18
               </time>
             
 
@@ -348,8 +335,8 @@ $ git config user.email
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
+                  <a href="/categories/CSharp/" itemprop="url" rel="index">
+                    <span itemprop="name">CSharp</span>
                   </a>
                 </span>
 
@@ -383,70 +370,66 @@ $ git config user.email
       
 
       
-        <p><img src="http://www.pythontab.com/uploadfile/2015/1224/20151224035849577.jpg" alt="常用命令"></p>
-<h1 id="1-常用配置"><a href="#1-常用配置" class="headerlink" title="1. 常用配置"></a>1. 常用配置</h1><h2 id="1-1-设置Email"><a href="#1-1-设置Email" class="headerlink" title="1.1 设置Email"></a>1.1 设置Email</h2><pre><code>$ git config --global user.name &quot;your name&quot;
-$ git config --global user.email &quot;your_email@youremail.com&quot;
-</code></pre><p>查看结果：</p>
-<pre><code>$ git config user.name
-$ git config user.email
-</code></pre><h2 id="1-2-用vim写日志"><a href="#1-2-用vim写日志" class="headerlink" title="1.2 用vim写日志"></a>1.2 用vim写日志</h2><pre><code>$ git config --global core.editor vim
-</code></pre><p>查看结果：</p>
-<pre><code>$ cat ~/.git/config
-</code></pre><h1 id="2-配置GitHub"><a href="#2-配置GitHub" class="headerlink" title="2. 配置GitHub"></a>2. 配置GitHub</h1><h2 id="2-1-首先在本地创建ssh-key"><a href="#2-1-首先在本地创建ssh-key" class="headerlink" title="2.1.首先在本地创建ssh key"></a>2.1.首先在本地创建ssh key</h2><pre><code>$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
-</code></pre><p> 之后会要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在~/下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。</p>
-<pre><code>$ cat ~/.ssh/id_rsa.pub
-</code></pre><p>回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key,title随便填，粘贴key。</p>
-<h2 id="2-2-验证"><a href="#2-2-验证" class="headerlink" title="2.2. 验证"></a>2.2. 验证</h2><p>为了验证是否成功，在git bash下输入：</p>
-<pre><code>$ ssh -T git@github.com 
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/145902-adc9c8f347b1c84b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证"></p>
-<p>如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。<br>这就表示已成功连上github。</p>
-<p><img src="http://img.my.csdn.net/uploads/201304/16/1366089042_1867.png" alt="成功连接"></p>
-<h2 id="2-3-上传GitHub"><a href="#2-3-上传GitHub" class="headerlink" title="2.3. 上传GitHub"></a>2.3. 上传GitHub</h2><p>接下来我们要做的就是把本地仓库传到github上去，在此之前还需要设置username和email，因为github每次commit都会记录他们。</p>
-<pre><code>$ git config --global user.name &quot;your name&quot;
-$ git config --global user.email &quot;your_email@youremail.com&quot;
-</code></pre><h2 id="2-4-添加远程地址"><a href="#2-4-添加远程地址" class="headerlink" title="2.4. 添加远程地址"></a>2.4. 添加远程地址</h2><pre><code>$ git remote add origin git@github.com:yourName/yourRepo.git
-</code></pre><p> 后面的yourName和yourRepo表示你再github的用户名和刚才新建的仓库，加完之后进入.git，打开config，这里会多出一个remote “origin”内容，这就是刚才添加的远程地址，也可以直接修改config来配置远程地址。</p>
-<h1 id="3-提交、上传"><a href="#3-提交、上传" class="headerlink" title="3. 提交、上传"></a>3. 提交、上传</h1><h2 id="3-1-在本地仓库里添加文件"><a href="#3-1-在本地仓库里添加文件" class="headerlink" title="3.1. 在本地仓库里添加文件"></a>3.1. 在本地仓库里添加文件</h2><pre><code>$ git add a.txt
-$ git commit -m &quot;first commit&quot;
-</code></pre><p>极简方式：</p>
-<pre><code>$ git add .
-$ git commit -a
-</code></pre><h2 id="3-2-上传到github："><a href="#3-2-上传到github：" class="headerlink" title="3.2. 上传到github："></a>3.2. 上传到github：</h2><pre><code>$ git push -u origin master
-</code></pre><p>如果失败，可能是GitHub上的README.md不在本地，执行：</p>
-<pre><code>$ git pull --rebase origin master # 合并
-</code></pre><p>之后再执行push。</p>
-<p>git push命令会将本地仓库推送到远程服务器。git pull命令则相反。</p>
-<p>修改完代码后，使用git status可以查看文件的差别，使用git add 添加要commit的文件，也可以用git add -i来智能添加文件。之后git commit提交本次修改，git push上传到github。</p>
-<h1 id="4-常用配置"><a href="#4-常用配置" class="headerlink" title="4. 常用配置"></a>4. 常用配置</h1><h2 id="4-1-添加fork-me图标"><a href="#4-1-添加fork-me图标" class="headerlink" title="4.1 添加fork me图标"></a>4.1 添加fork me图标</h2><p><img src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt=""></p>
-<p>ref : <a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">https://github.com/blog/273-github-ribbons</a></p>
-<h2 id="Readme-md模板"><a href="#Readme-md模板" class="headerlink" title="Readme.md模板"></a>Readme.md模板</h2><pre><code>&lt;a href=&quot;https://github.com/breakerthb/&quot;&gt;
-&lt;img style=&quot;position: absolute; top: 0; left: 0; border: 0;&quot; src=&quot;https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67&quot; alt=&quot;Fork me on GitHub&quot; data-canonical-src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png&quot;&gt;
-&lt;/a&gt;
+        <p>ASP.NET中，数据源控件是所有显示控件和数据库绑定的媒介，因此相当重要。数据源控件实际上是帮助绑定动作完成数据库的增、删、改、查功能。<br>与SqlDataSource相比，ObjectDataSource更适用于三层架构（UI、BLL、DAL）的开发。用户可以自行定义访问数据库接口。<br>ObjectDataSource控件实际上是通过一个BLL层类完成对某一个特定数据库的操作。</p>
+<h1 id="1-建立三层架构"><a href="#1-建立三层架构" class="headerlink" title="1.建立三层架构"></a>1.建立三层架构</h1><p>这里，我们用DAL和BLL两个类来代表这两个层。至于UI层，自然是ASPX页面了。</p>
+<h1 id="2-BLL层"><a href="#2-BLL层" class="headerlink" title="2.BLL层"></a>2.BLL层</h1><pre><code>public class BLL{
+ [DataObjectMethod(DataObjectMethodType.Insert)]
+    public static int Add(string strInfo)
+    {
+      DAL da = new DAL();
+      return da.Add(strInfo);
+    }
 
-# Project Introduction
+    [DataObjectMethod(DataObjectMethodType.Delete)]
+    public static void Delete(int nID)
+    {
+      DAL da = new DAL();
+      da.Delete(nID)
+    }
 
-XXXXX
+    [DataObjectMethod(DataObjectMethodType.Update)]
+    public static void Update(int nID, string strInfo)
+    {
+      DAL da = new DAL();
+      da.Update(nID, strInfo);
+    }
 
-![](https://github.com/breakerthb/AccessCount/blob/master/intro.png)
+    [DataObjectMethod(DataObjectMethodType.Select)]
+    public static SqlDataReader GetAll()
+    {
+        DAL da = new DAL();
+        return da.GetAll();
+    }
+}
+</code></pre><p>注意：中括号里的语句用了声明这四个函数的意义，方便后面绑定控件时指定相关方法。</p>
+<h1 id="3-DAL层"><a href="#3-DAL层" class="headerlink" title="3.DAL层"></a>3.DAL层</h1><pre><code>public class DAL{
+    public int Add(string strInfo)
+    {
+      // 连接Database, 调用Insert语句
+    }
 
-# Flag
+    public void Delete(int nID)
+    {
+      // 连接Database, 调用Delete语句
+    }
 
-- Test
+    public void Update(int nID, string strInfo)
+    {
+      // 连接Database, 调用update语句
+    }
 
-# Language
+    public SqlDataReader GetAll()
+    {
+      // 连接Database, 调用select语句
+    }
+}
+</code></pre><h1 id="4-绑定ObjectDataSource控件"><a href="#4-绑定ObjectDataSource控件" class="headerlink" title="4.绑定ObjectDataSource控件"></a>4.绑定ObjectDataSource控件</h1><h2 id="1-从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中"><a href="#1-从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中" class="headerlink" title="1) 从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中"></a>1) 从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中</h2><h2 id="2-配置数据源"><a href="#2-配置数据源" class="headerlink" title="2)配置数据源"></a>2)配置数据源</h2><p><img src="http://upload-images.jianshu.io/upload_images/145902-19523683853a78ca?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ObjectDataSource数据源控件"></p>
+<h2 id="3）选择业务对象：BLL类"><a href="#3）选择业务对象：BLL类" class="headerlink" title="3）选择业务对象：BLL类"></a>3）选择业务对象：BLL类</h2><p><img src="http://upload-images.jianshu.io/upload_images/145902-747944ec56309e7d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ObjectDataSource数据源控件"></p>
+<p>下一步</p>
+<h2 id="4）定义数据方法"><a href="#4）定义数据方法" class="headerlink" title="4）定义数据方法"></a>4）定义数据方法</h2><p><img src="http://upload-images.jianshu.io/upload_images/145902-5023cad227dd544a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ObjectDataSource数据源控件"></p>
+<p>分别给增删改查方法指定BLL类中的方法。</p>
+<p>点击“完成”。这样一个ObjectDataSource控件就定义完成了，之后可以使用它为其他控件提供数据服务。</p>
 
-- C++
-
-# Branch
-
-## master
-
-A tool without UI
-
-## ui
-
-A tool with UI
-</code></pre>
       
     </div>
 
@@ -469,7 +452,7 @@ A tool with UI
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/CSharp/" rel="tag"># CSharp</a>
           
         </div>
       
@@ -482,14 +465,18 @@ A tool with UI
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/18/SqlHelperOperate.html" rel="next" title="SqlHelper.cs使用方法">
+                <i class="fa fa-chevron-left"></i> SqlHelper.cs使用方法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/18/CSharpGDIDraw.html" rel="prev" title="CSharpGDI+绘图">
-                CSharpGDI+绘图 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/18/ObjectDataSource-2.html" rel="prev" title="ObjectDataSource数据源控件（2）自动实现">
+                ObjectDataSource数据源控件（2）自动实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -653,7 +640,7 @@ A tool with UI
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-常用配置"><span class="nav-number">1.</span> <span class="nav-text">1. 常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-设置Email"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 设置Email</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-用vim写日志"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 用vim写日志</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-配置GitHub"><span class="nav-number">2.</span> <span class="nav-text">2. 配置GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-首先在本地创建ssh-key"><span class="nav-number">2.1.</span> <span class="nav-text">2.1.首先在本地创建ssh key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-验证"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. 验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-上传GitHub"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. 上传GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-添加远程地址"><span class="nav-number">2.4.</span> <span class="nav-text">2.4. 添加远程地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-提交、上传"><span class="nav-number">3.</span> <span class="nav-text">3. 提交、上传</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-在本地仓库里添加文件"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. 在本地仓库里添加文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-上传到github："><span class="nav-number">3.2.</span> <span class="nav-text">3.2. 上传到github：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-常用配置"><span class="nav-number">4.</span> <span class="nav-text">4. 常用配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-添加fork-me图标"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 添加fork me图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Readme-md模板"><span class="nav-number">4.2.</span> <span class="nav-text">Readme.md模板</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-建立三层架构"><span class="nav-number">1.</span> <span class="nav-text">1.建立三层架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-BLL层"><span class="nav-number">2.</span> <span class="nav-text">2.BLL层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-DAL层"><span class="nav-number">3.</span> <span class="nav-text">3.DAL层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-绑定ObjectDataSource控件"><span class="nav-number">4.</span> <span class="nav-text">4.绑定ObjectDataSource控件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中"><span class="nav-number">4.1.</span> <span class="nav-text">1) 从工具箱中拖拽一个ObjectDataSource控件到需要的ASPX页面中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置数据源"><span class="nav-number">4.2.</span> <span class="nav-text">2)配置数据源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3）选择业务对象：BLL类"><span class="nav-number">4.3.</span> <span class="nav-text">3）选择业务对象：BLL类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4）定义数据方法"><span class="nav-number">4.4.</span> <span class="nav-text">4）定义数据方法</span></a></li></ol></li></ol></div>
             
 
           </div>
