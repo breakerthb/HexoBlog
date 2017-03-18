@@ -1,0 +1,938 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="基于hexo搭建个人博客（express&amp;amp;windows）前言记录这一次搭建hexo静态博客的过程以及遇到的一些问题。1. Ubuntu安装Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。2. hexo安装和搭建和部署hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：
+安装nodejs
+用nv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo_deploy_guide">
+<meta property="og:url" content="http://breakerthb.github.io/2017/03/11/基于hexo搭建个人博客（express&windows）.html">
+<meta property="og:site_name" content="天花板的个人博客">
+<meta property="og:description" content="基于hexo搭建个人博客（express&amp;amp;windows）前言记录这一次搭建hexo静态博客的过程以及遇到的一些问题。1. Ubuntu安装Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。2. hexo安装和搭建和部署hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：
+安装nodejs
+用nv">
+<meta property="og:updated_time" content="2017-03-17T07:10:35.289Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo_deploy_guide">
+<meta name="twitter:description" content="基于hexo搭建个人博客（express&amp;amp;windows）前言记录这一次搭建hexo静态博客的过程以及遇到的一些问题。1. Ubuntu安装Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。2. hexo安装和搭建和部署hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：
+安装nodejs
+用nv">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://breakerthb.github.io/2017/03/11/基于hexo搭建个人博客（express&windows）.html"/>
+
+
+
+
+
+  <title> hexo_deploy_guide | 天花板的个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">天花板的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://breakerthb.github.io/2017/03/11/基于hexo搭建个人博客（express&windows）.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="天花板">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="天花板的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                hexo_deploy_guide
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-11T16:56:50+00:00">
+                2017-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基于hexo搭建个人博客（express-amp-windows）"><a href="#基于hexo搭建个人博客（express-amp-windows）" class="headerlink" title="基于hexo搭建个人博客（express&amp;windows）"></a>基于hexo搭建个人博客（express&amp;windows）</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><h2 id="记录这一次搭建hexo静态博客的过程以及遇到的一些问题。"><a href="#记录这一次搭建hexo静态博客的过程以及遇到的一些问题。" class="headerlink" title="记录这一次搭建hexo静态博客的过程以及遇到的一些问题。"></a>记录这一次搭建hexo静态博客的过程以及遇到的一些问题。</h2><h2 id="1-Ubuntu安装"><a href="#1-Ubuntu安装" class="headerlink" title="1. Ubuntu安装"></a>1. Ubuntu安装</h2><h3 id="Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。"><a href="#Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。" class="headerlink" title="Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。"></a>Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看<a href="http://baidu.com/" target="_blank" rel="external">Ubuntu的安装</a>。</h3><h2 id="2-hexo安装和搭建和部署"><a href="#2-hexo安装和搭建和部署" class="headerlink" title="2. hexo安装和搭建和部署"></a>2. hexo安装和搭建和部署</h2><h3 id="hexo博客搭建的基础流程为：安装Node-js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍："><a href="#hexo博客搭建的基础流程为：安装Node-js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：" class="headerlink" title="hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍："></a>hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：</h3><ul>
+<li><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><ul>
+<li><p>用nvm安装（因为要从github上下载，所以还没成功过）</p>
+</li>
+<li><p>windows下安装包，直接从<a href="http://nodejs.cn/" target="_blank" rel="external">nodejs官网</a>下载安装包，在windows下直接双击msi安装， 默认情况下Node.js安装完毕，会自动在系统的path环境变量中配置了node.exe的目录路径，但是可能你安装完成后，dos命令下输入node提示错误。打开系统环境变量，发现确实已经配置了，但是dos下运行“set path”又看不到nodejs的配置，那就是人品的问题了。。重启电脑重新加载就可以了。也可以删掉自动配置的，手动再加上即可。</p>
+</li>
+<li><p>linux下安装包（全局安装）</p>
+<pre><code>解压到/home/xiaojie/nodejs/node-v6.2.0-linux-x64/
+
+配置环境变量，vim /etc/profile，添加下面两句：
+
+  export NODE_HOME=/home/xiaojie/nodejs/node-v6.2.0-linux-x64
+  export PATH=$NODE_HOME/bin:$PATH
+
+编译/etc/profile 使配置生效 ，source /etc/profile
+
+检查是否安装成功，node -v 
+</code></pre></li>
+</ul>
+</li>
+<li><h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><ul>
+<li>新版本的nodejs已经集成了npm，所以可以通过输入”npm -v”查看npm是否安装成功。如果没有安装的话，可以通过sudo apt-get install npm 来全局安装npm。</li>
+<li><p>由于公司安保的问题，需要先申请web访问例外，然后配置源和代理，才能正常使用。<br>首先几个重要的配置项一一介绍</p>
+<pre><code>prefix   -- 全局安装的路径，也就是npm install -g 安装的模块在哪个位置。这个看个人喜好。我喜好将他设置到安装路径下面。
+
+proxy -- 代理（http的代理是用这个），代理连外网的朋友这个就需要配置了。
+
+https_proxy -- https代理
+
+registry -- 类似linux的软件源，这个一定要修改的 
+
+    #npm config set prefix &quot;c:\nodejs&quot;
+    npm config set proxy=http://109.105.113.200:8080
+    npm config set https_proxy=http://109.105.113.200:8080
+    npm config set registry=https://registry.npm.taobao.org/
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="Hexo的搭建"><a href="#Hexo的搭建" class="headerlink" title="Hexo的搭建"></a>Hexo的搭建</h3><ul>
+<li><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装Hexo的非常简单，只要一条命令，前提是安装好Node.js,</p>
+<pre><code>npm install -g hexo-cli
+</code></pre></li>
+<li><p>同样配置环境变量，vim /etc/profile，添加下面两句：</p>
+<pre><code>export HEXO_HOME=/home/xiaojie/nodejs/Website1/node_modules/hexo-cli
+
+export PATH=$HEXO_HOME/bin:$PATH
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>      编译/etc/profile 使配置生效 ，source /etc/profile
+
+      此时就可以在全局作用域下，hexo -v检查是否能正常使用。
+
+- 本地启动Hello World与Hexo简单使用
+
+    + 新建一个文件夹，取名为blog，cd到该文件夹，安装必要的文件
+
+            hexo init
+
+            npm install
+
+    + 有了必要的各种配置文件之后就可以在本地预览效果了
+
+            hexo g #生成静态文件
+
+            hexo s #在本地服务器上运行
+
+    + 之后打开浏览器并输入IP地址 http://localhost:4000/
+</code></pre><ul>
+<li><h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h3><ul>
+<li><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可，公司不能使用git下载，所以我在github上下载下来，<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">链接在这里</a></p>
+</li>
+<li><p>启用主题</p>
+<ul>
+<li><p>打开站点配置文件，找到theme字段，并将其值修改为next</p>
+<pre><code>theme：next
+</code></pre><p>然后hexo s即可以预览效果</p>
+</li>
+<li><p>更换主题外观</p>
+<p>  Next有三个主题外观，默认使用的Muse，直接更改主题配置文件的scheme参数即可，如果想修改站点的字体，可以通过站点配置文件中的，language：zh-CN来修改，再执行<font color="#0099ff">hexo clean</font> 和<font color="#0099ff"> hexo s</font>可预览效果。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>  本文介绍部署在nodejs的express服务器上，操作系统windows。</p>
+<ul>
+<li><p><a href="http://www.expressjs.com.cn/starter/generator.html" target="_blank" rel="external">安装express应用生成器</a> </p>
+<pre><code>npm install express-generator -g
+</code></pre><p>   创建应用</p>
+<pre><code>express myblog
+</code></pre><p>  安装依赖包</p>
+<pre><code>npm install
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>  + 在blog目录下，执行&lt;font color=#0099ff&gt;hexo g&lt;/font&gt;构建静态目录public，用于部署
+
++ 将public文件夹替换掉/myblog/public文件夹
+
++ 将app.js里的中间件替换掉
+
+
+         /* GET home page. */
+        app.get(&apos;/&apos;, function(req, res, next) {
+          var options = {
+            root: __dirname + &apos;/public/&apos;,
+            dotfiles: &apos;deny&apos;,
+            headers: {
+                &apos;x-timestamp&apos;: Date.now(),
+                &apos;x-sent&apos;: true
+            }
+          };
+          var fileName = &apos;views/index.html&apos;;
+          res.sendFile(fileName, options, function (err) {
+            if (err) {
+              console.log(err);
+              res.status(err.status).end();
+            }
+            else {
+              console.log(&apos;Sent:&apos;, fileName);
+            }
+          });
+        });
+
++ 启动node app.js,查看http://109.105.112.134：3000
+
++ windows创建服务，创建service.js 内容为：
+
+    var Service = require(&apos;node-windows&apos;).Service;
+
+    // Create a new service object
+    var svc = new Service({
+    name:&apos;SharingBlog&apos;,
+    description: &apos;a blog for sharing knowledge&apos;,
+    script:__dirname+&apos;/bin/www&apos;
+    });
+    console.log(svc.script);
+    // Listen for the &quot;install&quot; event, which indicates the
+    // process is available as a service.
+    svc.on(&apos;install&apos;,function(){
+    console.log(&apos;Install complete.&apos;);
+    //svc.start();
+    });
+
+    //svc.user.account = &apos;SYSTEM&apos;;
+    svc.install();
+
+以及uninstall.js，内容为：
+
+    var Service = require(&apos;node-windows&apos;).Service;
+
+    // Create a new service object
+    var svc = new Service({
+    name:&apos;SharingBlog&apos;,
+    script: __dirname+&apos;/bin/www&apos;
+    });
+
+    // Listen for the &quot;uninstall&quot; event so we know when it&apos;s done.
+    svc.on(&apos;uninstall&apos;,function(){
+    console.log(&apos;Uninstall complete.&apos;);
+    });
+
+    // Uninstall the service.
+    svc.uninstall();
+
++ 制作脚本
+
+        &quot;%~dp0SamsungDCMServer.exe&quot; &quot;%~dp0Admin\service.js&quot;
+        net start SharingBlog
+
+    双击脚本安装windos服务，访问http://localhost：3000，测试网站是否部署成功。
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/11/BlogDemo.html" rel="prev" title="博客模板">
+                博客模板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="天花板" />
+          <p class="site-author-name" itemprop="name">天花板</p>
+           
+              <p class="site-description motion-element" itemprop="description">Do not give up unless you die</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/breakerthb" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jianshu.com/u/9202155c8b4a" title="简书" target="_blank">简书</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于hexo搭建个人博客（express-amp-windows）"><span class="nav-number">1.</span> <span class="nav-text">基于hexo搭建个人博客（express&windows）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#记录这一次搭建hexo静态博客的过程以及遇到的一些问题。"><span class="nav-number">2.1.</span> <span class="nav-text">记录这一次搭建hexo静态博客的过程以及遇到的一些问题。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Ubuntu安装"><span class="nav-number">2.2.</span> <span class="nav-text">1. Ubuntu安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。"><span class="nav-number">2.2.1.</span> <span class="nav-text">Ubuntu安装包括网卡配置，代理配置，源配置等等，请查看Ubuntu的安装。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-hexo安装和搭建和部署"><span class="nav-number">2.3.</span> <span class="nav-text">2. hexo安装和搭建和部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博客搭建的基础流程为：安装Node-js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍："><span class="nav-number">2.3.1.</span> <span class="nav-text">hexo博客搭建的基础流程为：安装Node.js，安装npm，安装主题（Next），本地测试运行，部署。下面分别介绍：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装nodejs"><span class="nav-number">2.3.2.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装npm"><span class="nav-number">2.3.3.</span> <span class="nav-text">安装npm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo的搭建"><span class="nav-number">2.3.4.</span> <span class="nav-text">Hexo的搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Next主题"><span class="nav-number">2.3.5.</span> <span class="nav-text">安装Next主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">2.3.6.</span> <span class="nav-text">部署</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">天花板</span>
+</div>
+
+<!-- 
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+ -->
+
+<!-- 
+&nbsp;&nbsp;|&nbsp;&nbsp;
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/sitemap.xml">Google网站地图</a></span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+
+  </span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+ -->
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
